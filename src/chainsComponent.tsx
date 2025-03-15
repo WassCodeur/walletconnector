@@ -2,7 +2,7 @@ import ChainModal from './ChainModal.tsx';
 export interface WalletModalProps {
     isOpen: boolean;
     Close: () => void;
-   
+
 }
 
 

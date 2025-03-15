@@ -12,7 +12,7 @@ const ChainModal = () => {
                 {
                     chains.map((chain) => (
                         <button className="option-card" onClick={() => { switchChain({ chainId: chain.id }); }}>
-                            <img src={`src/assets/${chain.name}.svg`} alt={chain.name} className="option-icon" />
+                            <img src={`/public/${chain.name}.svg`} alt={chain.name} className="option-icon" />
                             <div className="option-name">{chain.name}</div>
                         </button>
                     ))

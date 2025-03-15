@@ -4,14 +4,14 @@ import WalletComponent from './WalletComponent.tsx';
 export interface WalletModalProps {
     isOpen: boolean;
     Close: () => void;
-    
+
 }
 
 
 
 const WalletModal: React.FC<WalletModalProps> = ({ isOpen, Close }) => {
-    
-   
+
+
     if (!isOpen) return null;
 
     return (
@@ -32,12 +32,12 @@ const WalletModal: React.FC<WalletModalProps> = ({ isOpen, Close }) => {
                 </label>
             </div>
 
-           
+
             <ChainModal></ChainModal>
             <WalletComponent></WalletComponent>
         </div>
 
-            
+
 
 
     )
