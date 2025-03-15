@@ -1,6 +1,7 @@
 
 import ChainModal from './ChainModal.tsx';
 import WalletComponent from './WalletComponent.tsx';
+import { useEffect } from 'react';
 export interface WalletModalProps {
     isOpen: boolean;
     Close: () => void;
@@ -11,6 +12,20 @@ export interface WalletModalProps {
 
 const WalletModal: React.FC<WalletModalProps> = ({ isOpen, Close }) => {
 
+
+    // handle esc key
+    const handleEsc = (e: KeyboardEvent) => {
+        if (e.key === 'Escape') {
+            Close();
+        }
+    }
+  
+    useEffect(() => {
+        document.addEventListener('keydown', handleEsc, false);
+        return () => {
+            document.removeEventListener('keydown', handleEsc, false);
+        }
+    }, [])
 
     if (!isOpen) return null;
 
