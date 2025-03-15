@@ -1,4 +1,4 @@
-import { http, createConfig, injected } from 'wagmi'
+import { http, createConfig } from 'wagmi'
 import {
     base, mainnet, polygon, lisk
 
@@ -19,6 +19,3 @@ export const config = createConfig({
     },
 })
 
-function WalletConnect(arg0: { projectId: any }): any {
-    throw new Error('Function not implemented.')
-}

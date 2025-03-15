@@ -1,5 +1,4 @@
-import { useState, useEffect } from 'react';
-import { useConnect, useSwitchChain } from 'wagmi';
+import {  useSwitchChain } from 'wagmi';
 
 
 const ChainModal = () => {

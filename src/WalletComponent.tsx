@@ -1,5 +1,4 @@
-import { useState, useEffect } from 'react';
-import { useConnect, useSwitchChain } from 'wagmi';
+import { useConnect } from 'wagmi';
 
 
 const WalletComponent = () => {
@@ -9,7 +8,6 @@ const WalletComponent = () => {
         <>
             <h3 className="section-title">Choose Wallet to connect</h3>
             <div className="wallet-options">
-
                 {
                     connectors.map((connector) => (
                         <button className="option-card" onClick={() => { connect({ connector }) }}>
@@ -18,8 +16,9 @@ const WalletComponent = () => {
                         </button>
                     ))
                 }
+                {error && <p>{error.message}</p>}
             </div>
-        
+
         </>
 
     )

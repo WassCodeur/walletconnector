@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import { useSwitchChain } from 'wagmi'
 import ChainsComponent from './chainsComponent'
 
 

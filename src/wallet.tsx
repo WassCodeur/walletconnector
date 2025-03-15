@@ -1,20 +1,17 @@
-import { useState, useEffect } from 'react';
-import { useConnect, useSwitchChain } from 'wagmi';
+
 import ChainModal from './ChainModal.tsx';
 import WalletComponent from './WalletComponent.tsx';
 export interface WalletModalProps {
     isOpen: boolean;
     Close: () => void;
-    WalletOption: React.FC<{ connector: any; onClick: () => void }>;
+    
 }
 
 
 
-const WalletModal: React.FC<WalletModalProps> = ({ isOpen, Close, WalletOption }) => {
+const WalletModal: React.FC<WalletModalProps> = ({ isOpen, Close }) => {
     
    
-    const [chainId, setChainId] = useState(0)
-
     if (!isOpen) return null;
 
     return (
