@@ -23,7 +23,7 @@ export function Account() {
                     </div>
 
                     <div className="user-avatar">
-                        <img src="/public/ens-avatar.png" />
+                        <img src="/ens-avatar.png" />
                     </div>
 
 
